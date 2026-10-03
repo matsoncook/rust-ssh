@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run client",
+            "cargo": {
+                "args": ["build", "--bin", "client"],
+                "filter": {
+                    "name": "client",
+                    "kind": "bin"
+                }
+            },
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run SSH tunnel",
+            "cargo": {
+                "args": ["build", "--bin", "ssh_connect"],
+                "filter": {
+                    "name": "ssh_connect",
+                    "kind": "bin"
+                }
+            },
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run webserver",
+            "cargo": {
+                "args": ["build", "--bin", "webserver"],
+                "filter": {
+                    "name": "webserver",
+                    "kind": "bin"
+                }
+            },
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
