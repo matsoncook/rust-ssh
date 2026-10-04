@@ -14,7 +14,7 @@ async fn main() -> std::io::Result<()> {
                 "-o", "ServerAliveCountMax=3",
                 "-o", "ExitOnForwardFailure=yes",
                 "-L", "9000:127.0.0.1:8000",
-                "user@remote",
+                "mark-cook@localhost",
             ])
             .spawn()?;
 
